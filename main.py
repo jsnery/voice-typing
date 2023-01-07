@@ -10,7 +10,7 @@ mic = sr.Microphone()
 
 # Vosk
 SetLogLevel(-1)
-model = Model('full')
+model = Model('lite')
 recognizer = KaldiRecognizer(model, 16000)  # Reconhecedor de Voz
 
 
