@@ -14,7 +14,7 @@ model = Model('lite')
 recognizer = KaldiRecognizer(model, 16000)  # Reconhecedor de Voz
 
 
-def escrita():  # Speech Recognition
+def voice_typing():  # Speech Recognition
     while True:
         try:
             with mic as source:
@@ -54,7 +54,7 @@ while True:
                 except PlaysoundException:
                     playsound_('sound.wav')
 
-                gui.typewrite(f'{escrita()}\n', interval=0.05)  # type: ignore
+                gui.typewrite(f'{voice_typing()}\n', interval=0.05)
 
             case _:
                 continue
